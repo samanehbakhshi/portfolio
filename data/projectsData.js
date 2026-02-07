@@ -124,7 +124,7 @@ export const projectsData = [
       Technologies: [
         {
           title: "Tools & Technologies",
-          techs: ["React", "JavaScript", "TailwindCSS"],
+          techs: ["React", "JavaScript","TypeScript","React Query", "TailwindCSS", "Redux","Redux ToolKit"],
         },
       ],
       ProjectDetailsHeading: "Challenge",
