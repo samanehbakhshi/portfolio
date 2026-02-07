@@ -1,12 +1,12 @@
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { FiArrowDownCircle } from 'react-icons/fi';
-import useThemeSwitcher from '../../hooks/useThemeSwitcher';
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { FiArrowDownCircle } from "react-icons/fi";
+import useThemeSwitcher from "../../hooks/useThemeSwitcher";
 
 function AppBanner() {
-	const [activeTheme] = useThemeSwitcher();
+  const [activeTheme] = useThemeSwitcher();
 
-	return (
+  return (
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -66,14 +66,16 @@ function AppBanner() {
         transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
         className="w-full sm:w-2/3 text-right float-right mt-8 sm:mt-0"
       >
-        <img
+        <Image
           layout="responsive"
+          width={"300"}
+          height={"300"}
           src={
             activeTheme === "dark"
-			? "/images/banner.jpg"
+              ? "/images/banner.jpg"
               : "/images/developer-dark.svg"
           }
-		  className={activeTheme === "dark" ? "rounded-md" : ""}
+          className={activeTheme === "dark" ? "rounded-md" : ""}
           alt="Developer"
         />
       </motion.div>
